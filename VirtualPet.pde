@@ -5,7 +5,3 @@ ellipse(200,200,100,120);
 ellipse(200,140,80,60);
 ellipse(200,110,70,400;
 }
-void draw(){
-  //more of your code here
-}
-
