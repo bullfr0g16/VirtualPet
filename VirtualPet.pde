@@ -9,7 +9,7 @@ void setup(){
   ellipse(200,110,70,40);
   noStroke();
   rect(165,110,70,20);
-  stroke();
+  stroke(255,255,255);
   fill(255,255,255);
   ellipse(200,140,80,60);
   
