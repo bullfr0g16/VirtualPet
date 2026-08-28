@@ -5,6 +5,8 @@ void setup(){
   
   fill(158,115,81);
   ellipse(200,200,100,120);
+
+  triangle(120,210,155,220,155,235);
  
   ellipse(200,110,70,40);
   noStroke();
