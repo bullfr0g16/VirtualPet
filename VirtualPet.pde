@@ -2,7 +2,13 @@
 void setup(){
   size(400,400);
   background(255,255,255);
+  noStroke();
+  fill(106,176,111);
+  rect(0,240,400,240);
+  fill(141,194,217);
+  rect(0,0,400,240);
   
+  stroke(0,0,0);
   fill(158,115,81);
   ellipse(200,200,100,120);
 
