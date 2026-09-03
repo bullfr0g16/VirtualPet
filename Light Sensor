@@ -1,0 +1,75 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
+public void setup() {
+  size(400, 400);
+  arduino = new Arduino(this, Arduino.list()[0], 57600);
+}
+
+
+public void draw() {
+ noStroke();
+  fill(106,176,111);
+  rect(0,240,400,240);
+  fill(141,194,217);
+  rect(0,0,400,240);
+  
+  push();
+  stroke(0,0,0);
+  fill(158,115,81);
+  int y = arduino.analogRead(5);
+  translate(155,227.5);
+  if (y>= 550)
+  rotate((PI*(1023-y))/(700));
+  if (y<=549)
+  rotate(-PI*y/700);
+  translate(-155,-227.5);
+  triangle(110,200,170,210,170,235);
+  pop();
+  
+  stroke(0,0,0);
+  fill(158,115,81);
+  ellipse(200,200,100,120);
+
+
+  ellipse(200,110,70,40);
+  noStroke();
+  rect(165,110,70,20);
+  fill(255,255,255);
+  stroke(0,0,0);
+  ellipse(200,140,80,48);
+
+
+  fill(158,115,81);
+  ellipse(165,250,20,20);
+  ellipse(235,250,20,20);
+  ellipse(225,250,20,20);
+  ellipse(175,250,20,20);
+
+  rect(225,220,20,30);
+  rect(155,220,20,30);
+  rect(165,200,20,50);
+  rect(215,200,20,50);
+
+  fill(255,255,255);
+  ellipse(220,108,15,15); 
+  ellipse(180,108,15,15);
+  fill(0,0,0);
+  ellipse(220,108,10,10);
+  ellipse(180,108,10,10);
+
+  fill(158,115,81);
+  triangle(180,95,170,83,170,100);
+  triangle(220,95,230,83,230,100);
+  triangle(230,83,250,90,230,113);
+  triangle(170,83,150,90,170,113);
+
+  fill(0,0,0);
+  ellipse(200,135,20,10);
+
+  
+ 
+  
+ 
+}
