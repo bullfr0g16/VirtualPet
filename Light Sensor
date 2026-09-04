@@ -11,19 +11,19 @@ public void setup() {
 public void draw() {
  noStroke();
   fill(106,176,111);
-  rect(0,240,400,240);
+  rect(0,230,400,230);
   fill(141,194,217);
-  rect(0,0,400,240);
+  rect(0,0,400,230);
   
   push();
   stroke(0,0,0);
   fill(158,115,81);
   int y = arduino.analogRead(5);
   translate(155,227.5);
-  if (y>= 550)
-  rotate((PI*(1023-y))/(700));
-  if (y<=549)
-  rotate(-PI*y/700);
+  if (y>= 500)
+  rotate((PI*(1023-y))/(50));
+  if (y<=500)
+  rotate(-PI*y/400);
   translate(-155,-227.5);
   triangle(110,200,170,210,170,235);
   pop();
